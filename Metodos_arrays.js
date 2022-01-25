@@ -37,11 +37,30 @@ var findArticulo = articulos.find(function(articulo){
 }
 );
 console.log(findArticulo);
-
+var articulos = [
+    {nombre: "Camiseta", costo : 100, cantidad : 100},	
+    {nombre: "Pantalon", costo : 200, cantidad : 50},
+    {nombre: "Chamarra", costo : 300, cantidad : 10},
+    {nombre: "Zapatos", costo : 1000, cantidad : 20},
+    {nombre: "Gorra", costo : 50, cantidad : 100}
+];
 articulos.forEach(function(articulo){
     console.log(articulo.nombre);
 }
-
+);
+// some()
+var articulos = [
+    {nombre: "Camiseta", costo : 100, cantidad : 100},
+    {nombre: "Pantalon", costo : 200, cantidad : 50},
+    {nombre: "Chamarra", costo : 300, cantidad : 10},
+    {nombre: "Zapatos", costo : 1000, cantidad : 20},
+    {nombre: "Gorra", costo : 50, cantidad : 100}
+];
+var articulosBaratos = articulos.some(function(articulo){
+    return articulo.costo <= 100;
+}
+);
+console.log(articulosBaratos);
 
 
        
